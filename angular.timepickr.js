@@ -27,14 +27,14 @@ angular.module('timepickr', []).directive('timepickr', function() {
       };
     },
     link: function(scope, iElem, iAttrs) {
-      var loaded;
-      loaded = false;
+      var defaultLoaded;
+      defaultLoaded = false;
       scope.$watch('model', function(v) {
         var a, h, m, mod;
-        if (v === void 0 || loaded) {
+        if (v === void 0 || defaultLoaded) {
           return;
         }
-        loaded = true;
+        defaultLoaded = true;
         h = v.substr(0, 2);
         m = v.substr(3, 2);
         a = v.substr(6, 2).toLowerCase();
@@ -68,17 +68,13 @@ angular.module('timepickr', []).directive('timepickr', function() {
       });
       return angular.forEach(iElem.children(), function(ol) {
         return angular.forEach(ol.children, function(li) {
-          return li.addEventListener('click', function(e) {
-            var df;
+          return li.addEventListener('click', function() {
+            var df, e;
             e = angular.element(this);
             angular.forEach(e.parent().children(), function(c) {
               return angular.element(c).removeClass('active');
             });
-            if (e.hasClass('active')) {
-              e.removeClass('active');
-            } else {
-              e.addClass('active');
-            }
+            e.addClass('active');
             df = e.parent().attr('data-for');
             return scope.setData(df, e.html());
           });

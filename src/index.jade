@@ -18,20 +18,51 @@ html(lang="en", ng-app="DemoApp")
 			li Embeded on page - no "mouse over" features (yet)
 			li Only tested in Chrome
 		
+		
 		h2 Demo 1
 		p Bound directly to scope property ($scope.test_time)
-		div(ng-controller="DemoCtrl")
-			input(ng-model="test_time")
-			timepickr(ng-model="test_time")
-		
+		.row-fluid
+			.span6
+				div(ng-controller="DemoCtrl")
+					input(ng-model="test_time")
+					timepickr(ng-model="test_time")
+			.span6
+				pre
+					|<div ng-controller="DemoCtrl">
+					|  <input ng-model="test_time" />
+					|  <timepickr ng-model="test_time" />
+					|</div>
+
+
 		h2 Demo 2
 		p Bound to object property ($scope.data.test_time)
-		div(ng-controller="DemoCtrl2")
-			input(ng-model="data.test_time")
-			timepickr(ng-model="data.test_time")
+		.row-fluid
+			.span6
+				div(ng-controller="DemoCtrl")
+					input(ng-model="data.test_time")
+					timepickr(ng-model="data.test_time")
+			.span6
+				pre
+					|<div ng-controller="DemoCtrl">
+					|  <input ng-model="data.test_time">
+					|  <timepickr ng-model="data.test_time"></timepickr>
+					| </div>
+		
 		
 		
 		
 		script(src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js")
 		script(src="angular.timepickr.js")
 		script(src="demo.js")
+			
+		script(type="text/javascript")
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-37350838-2']);
+			_gaq.push(['_trackPageview']);
+			
+			(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+

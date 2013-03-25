@@ -17,18 +17,49 @@
     </ol>
     <h2>Demo 1</h2>
     <p>Bound directly to scope property ($scope.test_time)</p>
-    <div ng-controller="DemoCtrl">
-      <input ng-model="test_time">
-      <timepickr ng-model="test_time"></timepickr>
+    <div class="row-fluid">
+      <div class="span6">
+        <div ng-controller="DemoCtrl">
+          <input ng-model="test_time">
+          <timepickr ng-model="test_time"></timepickr>
+        </div>
+      </div>
+      <div class="span6">
+        <pre>&lt;div ng-controller=&quot;DemoCtrl&quot;&gt;
+ &lt;input ng-model=&quot;test_time&quot; /&gt;
+ &lt;timepickr ng-model=&quot;test_time&quot; /&gt;
+&lt;/div&gt;</pre>
+      </div>
     </div>
     <h2>Demo 2</h2>
     <p>Bound to object property ($scope.data.test_time)</p>
-    <div ng-controller="DemoCtrl2">
-      <input ng-model="data.test_time">
-      <timepickr ng-model="data.test_time"></timepickr>
+    <div class="row-fluid">
+      <div class="span6">
+        <div ng-controller="DemoCtrl">
+          <input ng-model="data.test_time">
+          <timepickr ng-model="data.test_time"></timepickr>
+        </div>
+      </div>
+      <div class="span6">
+        <pre>&lt;div ng-controller=&quot;DemoCtrl&quot;&gt;
+ &lt;input ng-model=&quot;data.test_time&quot;&gt;
+ &lt;timepickr ng-model=&quot;data.test_time&quot;&gt;&lt;/timepickr&gt;
+&lt;/div&gt;</pre>
+      </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
     <script src="angular.timepickr.js"></script>
     <script src="demo.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37350838-2']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+    </script>
   </body>
 </html>
