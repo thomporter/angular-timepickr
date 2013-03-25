@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DemoApp">
+  <head>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="timepickr.css">
+  </head>
+  <body class="container">
+    <h1>Angular Timepickr</h1>
+    <p>Inspired by <a href="http://haineault.com/media/jquery/ui-timepickr/page/">http://haineault.com/media/jquery/ui-timepickr/page/</a></p>
+    <p>Currently a long ways off from the inspiration.</p>
+    <h2>Limitations </h2>
+    <ol>
+      <li>No 24 hour option</li>
+      <li>Restricted to minutes on the 5s (:00, :05, :10, etc)  The directive rounds to nearet selectable minute on load...</li>
+      <li>Embeded on page - no "mouse over" features (yet)</li>
+      <li>Only tested in Chrome</li>
+    </ol>
+    <h2>Demo</h2>
+    <p>Bound directly to scope property ($scope.test_time)</p>
+    <div ng-controller="DemoCtrl">
+      <input ng-model="test_time">
+      <timepickr ng-model="test_time"></timepickr>
+    </div>
+    <h2>Demo 2</h2>
+    <p>Bound to object property ($scope.data.test_time)</p>
+    <div ng-controller="DemoCtrl2">
+      <input ng-model="data.test_time">
+      <timepickr ng-model="data.test_time"></timepickr>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="angular.timepickr.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>
