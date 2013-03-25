@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<title>Angular Timepickr</title>
+
+<xmp theme="united" style="display:none;">
+
 # Angular Timepickr
 
 Inspired by [http://haineault.com/media/jquery/ui-timepickr/page/](http://haineault.com/media/jquery/ui-timepickr/page/)
@@ -13,7 +19,12 @@ Currently a long ways off from the inspiration.
 
 ## Usage
 
-```<div ng-controller="DemoCtrl"> 
+```
+<div ng-controller="DemoCtrl"> 
 	<input ng-model="test_time"> <!-- Not Required --> 
 	<timepickr ng-model="test_time" /> 
-</div>```
+</div>
+```
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
