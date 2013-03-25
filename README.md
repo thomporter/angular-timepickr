@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html>
+<title>Hello Strapdown</title>
+
+<xmp theme="united" style="display:none;">
 # Angular Timepickr
 
 Inspired by [http://haineault.com/media/jquery/ui-timepickr/page/](http://haineault.com/media/jquery/ui-timepickr/page/)
@@ -27,3 +32,11 @@ angular.module('myApp', ['timepickr']).controller('testCtrl', function($scope){
 	$scope.test_time = '05:00 pm';
 });
 ```
+
+## Demo
+
+Visit the demo at [angular-timepickr.thomporter.com](http://angular-timepickr.thomporter.com)
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
